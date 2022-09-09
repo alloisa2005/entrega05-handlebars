@@ -19,6 +19,7 @@
   "homepage": "https://github.com/alloisa2005/entrega04#readme",
   "dependencies": {
     "express": "^4.18.1",
+    "express-handlebars": "^6.0.6",
     "pug": "^3.0.2"
   }
 }

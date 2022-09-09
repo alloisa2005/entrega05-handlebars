@@ -1,0 +1,25 @@
+<div style="width: 100%;  max-width: 1240px;  margin: 0 auto;  text-align: center;">
+
+    <h2>Lista de Productos Cargados ({{products.length}}) </h2>
+
+    {{#if products}}   
+      <table style="border: 1px solid black;width: 80%; margin: 15px auto;text-align: center; ">
+        <tr>
+          <th style="border: 1px solid black;">Nombre</th>
+          <th style="border: 1px solid black;">Precio</th>
+          <th style="border: 1px solid black;">Foto</th>
+        </tr>
+        {{#each products}}
+          <tr>
+            <td style="border: 1px solid black;" class="tabla_item"> {{this.title}} </td>
+            <td style="border: 1px solid black;" class="tabla_item">$ {{this.price}} </td> 
+            <td style="border: 1px solid black;"><img style="height: 120px;object-fit: cover;" src={{{this.thumbnail}}} alt={{{this.title}}} /></td>           
+          </tr>
+        {{/each}}
+      </table>   
+    {{else}}
+      <h3 style="font-size: 23px;margin: 15px 0;">No hay productos cargados</h3>
+    {{/if}}
+
+    <a style="text-decoration: none;display: inline-block;border: 1px solid black;padding: 5px 8px;width:170px;color: black;font-weight: bold;background-color:rgb(216, 211, 211);" href="/">Atrás</a>
+</div>

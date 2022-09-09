@@ -1,12 +1,14 @@
 const express = require('express');
 const productsRouter = require('./routes/products');
+const handlebars = require('express-handlebars');
 
 const app = express();
 
 app.listen(8080, () => console.log('Server Up!!'));
 
+app.engine('handlebars', handlebars.engine());
 app.set('views', './views');
-app.set('view engine', 'pug');
+app.set('view engine', 'handlebars');
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
